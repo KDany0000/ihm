@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .agenda {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .calendar {
+            grid-column: 1 / 2;
+        }
+
+        .actions {
+            grid-column: 2 / 3;
+        }
+
+        button {
+            display: block;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="agenda">
+        <div class="calendar">
+            <!-- Ici, on affichera le calendrier en utilisant un bibliothèque JavaScript -->
+        </div>
+        <div class="actions">
+            <button onclick="addAppointment()">Ajouter un rendez-vous</button>
+            <button onclick="removeAppointment()">Supprimer un rendez-vous</button>
+            <button onclick="showAppointments()">Afficher les rendez-vous</button>
+        </div>
+    </div>
+
+    <script>
+        // Remplacez ce code par votre logique pour gérer les rendez-vous
+        let appointments = {};
+
+        function addAppointment() {
+            let date = new Date();
+            let title = "Rendez-vous";
+            let time = "08h00";
+
+            if (!appointments[date]) {
+                appointments[date] = [];
+            }
+
+            appointments[date].push({ title, time });
+
+            alert("Rendez-vous ajouté avec succès");
+        }
+
+        function removeAppointment() {
+            let date = new Date();
+
+            if (!appointments[date]) {
+                alert("Aucun rendez-vous à supprimer");
+                return;
+            }
+
+            delete appointments[date];
+
+            alert("Rendez-vous supprimé avec succès");
+        }
+
+        function showAppointments() {
+            let date = new Date();
+
+            if (!appointments[date]) {
+                alert("Aucun rendez-vous à afficher");
+                return;
+            }
+
+            let appointmentsStr = "";
+            for (let appointment of appointments[date]) {
+                appointmentsStr += `${appointment.title} - ${date} à ${appointment.time}\n`;
+            }
+
+            alert(appointmentsStr);
+        }
+    </script>
+</body>
+</html>

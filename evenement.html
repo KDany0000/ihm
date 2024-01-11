@@ -1,0 +1,67 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des calendriers</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+
+    <ul class="menu">
+        <li><a href="#acceuil">Accueil</a></li>
+        <li><a href="#evenement">Evénements</a></li>
+        <li><a href="calendrier.html">Calendriers</a></li>
+        <li><a href="#deconnexion">Deconnexion</a></li>
+    </ul>
+    <h1>Gestion des calendriers</h1>
+
+<div id="eventForm">
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title"><br>
+
+    <label for="location">Location:</label>
+    <input type="text" id="location" name="location"><br>
+
+    <label>Schedule:</label><br>
+    <input type="checkbox" id="allDay" name="allDay">
+    <label for="allDay">All Day</label><br>
+    
+    <label for="starts">Starts:</label>
+    <input type="datetime-local" id="starts" name="starts"><br>
+    
+    <label for="ends">Ends:</label>
+    <input type="datetime-local" id="ends" name="ends"><br>
+
+    <label for="repeat">Repeat:</label>
+    <input type="text" id="repeat" name="repeat"><br>
+
+    <label for="reminders">Reminders:</label>
+    <input type="text" id="reminders" name="reminders"><br>
+
+    <label for="notes">Notes:</label><br>
+    <textarea id="notes" name="notes" rows="4" cols="50"></textarea><br>
+
+    <button type="button" onclick="submitEvent()">Add Event</button>
+</div>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+

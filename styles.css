@@ -40,3 +40,106 @@ h1 {
     background-color: #947e7e;
     color: black;
 }
+
+
+
+
+
+#eventForm label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#eventForm input, #eventForm textarea {
+    width: 80%;
+    padding: 4px;
+    margin-bottom: 2px;
+    box-sizing: border-box;
+}
+
+#eventForm button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 4px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+#eventForm button:hover {
+    background-color: #45a049;
+}
+
+
+
+#carousel-container{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 200px;
+    align-items: center;
+    
+}
+
+
+
+.hcontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 400px;
+    width:100%;
+    align-items: center;
+    margin:10px;
+    padding: 10px;
+    color:white;
+  
+}
+
+.hdiv1 {
+    background-color: #333;
+    display: flex;
+    -ms-flex-align: start;
+    color:white;
+    margin: 0;
+    height: 100%;
+    width: 50%;
+    text-align:justify;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    padding:5px;
+    flex-wrap: wrap;
+    
+}
+.hdiv1 h1{
+    color:white;
+}
+
+.hdiv2 {
+    display: flex;
+    -ms-flex-align: start;
+    background-color: white;
+    color: black;
+    margin: 0;
+    height: 100%;
+    width: 50%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-transform:lowercase;
+    padding:10px;
+    
+
+}
+.emphasize{
+    color: #f9c922;
+}
+
+
+footer{
+    display: flex;
+    justify-content: center;
+}

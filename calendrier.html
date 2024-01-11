@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des calendriers</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="calendrier.css">
+</head>
+<body>
+  
+
+    <ul class="menu">
+        <li><a href="#acceuil">Accueil</a></li>
+        <li><a href="evenement.html">Evénements</a></li>
+        <li><a href="#calendrier.html">Calendriers</a></li>
+        <li><a href="index.html">Deconnexion</a></li>
+    </ul>
+    <h1>Gestion des calendriers</h1>
+
+    
+    <table class="calendarT">
+        <thead>
+            <tr class="caTitle">
+                <th>&lt; &nbsp;mars &nbsp; &gt;</th>
+                <th colspan="5"></th>
+                <th>&lt; &nbsp;2024  &nbsp; &gt;</th>
+            </tr>
+                <tr>
+                    <th>Sun</th>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                </tr>
+            
+        </thead>
+        <tbody id="calendar-body">
+            <!-- Days will be dynamically added here using JavaScript -->
+        </tbody>
+    </table>
+</body>
+
+<script>
+    // Assuming total days in the month
+    const daysInMonth = 31;
+
+    // Get the tbody element
+    const tbody = document.getElementById('calendar-body');
+
+    // Initialize the day counter
+    let dayCounter = 1;
+
+    // Loop to fill in the days
+    for (let i = 0; i < 5; i++) {
+        // Create a new row
+        const row = document.createElement('tr');
+
+        // Loop for each day of the week
+        for (let j = 0; j < 7; j++) {
+            // Create a new cell
+            const cell = document.createElement('td');
+
+            // Check if there are remaining days to fill
+            if (dayCounter <= daysInMonth) {
+                // Create a div for the day number
+                const dayDiv = document.createElement('div');
+                dayDiv.textContent = dayCounter;
+
+                // Create a div for the event with the day number as ID
+                const eventDiv = document.createElement('div');
+                eventDiv.textContent = '';
+                eventDiv.id = 'event-' + dayCounter;
+
+                // Append both divs to the cell
+                cell.appendChild(dayDiv);
+                cell.appendChild(eventDiv);
+
+                // Increment the day counter
+                dayCounter++;
+            }
+
+
+            // Append the cell to the row
+            row.appendChild(cell);
+        }
+
+        // Append the row to the tbody
+        tbody.appendChild(row);
+    }
+
+
+
+        // Function to add or modify event title
+        function addEventTitle(day, title) {
+        const eventDiv = document.getElementById('event-' + day);
+
+        if (eventDiv) {
+            eventDiv.textContent = title;
+        } else {
+            console.error('Event div not found for day ' + day);
+        }
+    }
+
+  addEventTitle(5, 'Team Meeting');
+</script>
+
+</html>

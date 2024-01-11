@@ -48,9 +48,20 @@ th {
   
     text-align: center;
     color: #f9c922;
-    background-color: #333;
-    background-color:  #2b1f1c;
-    color: #fff;
+   
+  color:#333;
+  
     
+}
+
+.monthyear{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#ctile h1{
+    color:white;
+    background-color: #333;
 }
 

@@ -10,10 +10,10 @@
    
 
     <ul class="menu">
-        <li><a href="#acceuil"> <span class="emphasize">Accueil</span> </a></li>
-        <li><a href="#evenement">Evénements</a></li>
-        <li><a href="calendrier.html">Calendriers</a></li>
-        <li><a href="#deconnexion">Deconnexion</a></li>
+        <li><a href="#"> <span class="emphasize">Accueil</span> </a></li>
+        <li><a href="evenement.php">Evénements</a></li>
+        <li><a href="calendrier.php">Calendriers</a></li>
+        <li><a href="#deconnexion.php">Deconnexion</a></li>
     </ul>
 
 

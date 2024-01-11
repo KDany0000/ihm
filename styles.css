@@ -30,36 +30,66 @@ h1 {
 
 .menu li button {
     display: block;
-    color: rgb(156, 10, 10);
+    color: rgb(10, 110, 156);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 
 .menu li a:hover, .menu li button:hover {
-    background-color: #947e7e;
+    background-color:rgb(208, 235, 248);;
     color: black;
 }
 
 
 
 
+#eventC{
+    display: flex;
+    
+    width: 100%;
+    height: 90%;
+   flex-wrap: wrap;
+   
+}
 
+#eventForm{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    justify-content: space-evenly;
+}
+#enotification{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+#recentevent{
+    display: flex;
+    width: 50%;
+    background-color: #333;
+    color:white;
+}
+#recentevent h1{
+    color:#f9c922;
+}
 #eventForm label {
     display: block;
-    margin-bottom: 5px;
+   
     font-weight: bold;
 }
 
 #eventForm input, #eventForm textarea {
     width: 80%;
     padding: 4px;
-    margin-bottom: 2px;
+ 
     box-sizing: border-box;
 }
 
 #eventForm button {
-    background-color: #4caf50;
+    background-color:#333;
     color: #fff;
     padding: 4px;
     border: none;
@@ -68,8 +98,13 @@ h1 {
 }
 
 #eventForm button:hover {
-    background-color: #45a049;
+    color:#f9c922;
 }
+
+
+
+
+
 
 
 

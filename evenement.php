@@ -16,14 +16,17 @@
     
 
     <ul class="menu">
-        <li><a href="#acceuil">Accueil</a></li>
-        <li><a href="#evenement">Evénements</a></li>
-        <li><a href="calendrier.html">Calendriers</a></li>
-        <li><a href="#deconnexion">Deconnexion</a></li>
+        <li><a href="home.php">Accueil</a></li>
+        <li><a href="evenement.php"><span class="emphasize">Evénements</span></a></li>
+        <li><a href="calendrier.php">Calendriers</a></li>
+        <li><a href="deconnexion.php">Deconnexion</a></li>
     </ul>
-    <h1>Gestion des calendriers</h1>
+   
+
+<div id="eventC">
 
 <div id="eventForm">
+    <form action="">
     <label for="title">Title:</label>
     <input type="text" id="title" name="title"><br>
 
@@ -31,25 +34,28 @@
     <input type="text" id="location" name="location"><br>
 
     <label>Schedule:</label><br>
-    <input type="checkbox" id="allDay" name="allDay">
-    <label for="allDay">All Day</label><br>
-    
+ 
     <label for="starts">Starts:</label>
     <input type="datetime-local" id="starts" name="starts"><br>
     
     <label for="ends">Ends:</label>
     <input type="datetime-local" id="ends" name="ends"><br>
 
-    <label for="repeat">Repeat:</label>
-    <input type="text" id="repeat" name="repeat"><br>
 
-    <label for="reminders">Reminders:</label>
-    <input type="text" id="reminders" name="reminders"><br>
-
-    <label for="notes">Notes:</label><br>
-    <textarea id="notes" name="notes" rows="4" cols="50"></textarea><br>
+    
+    <div id="enotification">
+    <label for="reminders">Notifications:</label>
+    <input type="checkbox" checked="checked" id="reminders" name="reminders"><br>
+    </div>
+    <label for="description">Description:</label><br>
+    <textarea id="description" name="description" rows="4" cols="50"></textarea><br>
 
     <button type="button" onclick="submitEvent()">Add Event</button>
+</form>
+</div>
+<div id="recentevent">
+    <h1>upcoming events</h1>
+</div>
 </div>
 
 </body>
